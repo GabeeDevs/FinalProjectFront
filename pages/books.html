@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Livros</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Cadastrar Livro</h2>
+    <form id="bookForm">
+      <input type="text" id="title" placeholder="Título do Livro" required>
+      <input type="text" id="author" placeholder="Autor" required>
+      <input type="number" id="price" placeholder="Preço" required>
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('bookForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const title = document.getElementById('title').value;
+      const author = document.getElementById('author').value;
+      const price = document.getElementById('price').value;
+
+      try {
+        const response = await fetch('http://localhost:3000/books', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ title, author, price }),
+        });
+
+        if (response.ok) {
+          alert('Livro cadastrado com sucesso!');
+        } else {
+          throw new Error();
+        }
+      } catch {
+        alert('Tente cadastrar o livro novamente');
+      }
+    });
+  </script>
+</body>
+</html>
