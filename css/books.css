@@ -11,7 +11,7 @@ body{
     justify-content: center;
     align-items: center;
 
-    background-image: url(../img/login/backLivros.jpg);
+    background-image: url(../img/books/clubes-de-livro.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -35,23 +35,20 @@ main{
 .container{
     width: 500px;
     height: 500px;
-    background-color: #fde7e7;
+    background-color: #e2e2e2;
     border-radius: 40px;
     border-style: solid;
     border-width: 2px;
-    border: #ffffff;
 
     display: flex;
     flex-direction: column;
 }
-#title{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+#titleh2{
     width: 100%;
-    height: 60px;
-    background-color: #9b2a2a;
+    height: 50px;
+    background-color: rgb(29, 29, 29);
+    
+    color: #ffffff;
     border-top-left-radius:40px;
     border-top-right-radius:40px;
 
@@ -59,57 +56,58 @@ main{
     font-size: 1.8em;
     color: #ffffff;
 }
-#loginForm{
-    height: 400px;
+#bookForm{
     width: 100%;
+    height: 450px;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
-#loginForm h2{
-    height: 20px;
-    width: 80%;
-
-    font-size: 1.6em;
-    font-weight: bold;
-    text-align: center;
+#bookForm h2{
+    width: 70%;
+    font-size: 1.4em;
+    color: #292929;
 }
-#loginForm input{
+#title{
+    width: 70%;
     height: 30px;
-    width: 80%;
     border-radius: 20px;
-
-    text-align: center;
+}
+#author{
+    width: 50%;
+    height: 30px;
+    border-radius: 20px;
+    margin-right: 100px;
+}
+#price{
+    width: 20%;
+    height: 30px;
+    border-radius: 20px;
+    margin-right: 250px;
+}
+#bookForm input{
+    padding-left: 10px;
     font-size: 1.1em;
 }
-#loginForm input:focus{
+#bookForm input:focus{
     transform: scale(110%);
     transition: 0.6s;
 }
-#loginForm button{
+#bookForm button{
     height: 50px;
-    width: 100px;
-    background-color: #e44a4a;
-    border-radius: 20px;
-    border-color: #e44a4a;
+    width: 40%;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    background-color: #292929;
 
     color: #ffffff;
-    font-size: 1.1em;
-    font-weight: bold;
+    font-size: 1.3em;
 }
-#loginForm button:hover{
+#bookForm button:hover{
     cursor: pointer;
     transform: scale(110%);
-    transition: 0.5s;
-}
-#loginForm a{ 
-    font-size: 1.3em;
-    color: black;
-}
-#loginForm a:hover{
-    transform: scale(105%);
-    transition: 0.5s;
+    transition: 0.6s;
 }
