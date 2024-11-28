@@ -6,6 +6,7 @@
   <title>Login - Livraria</title>
   <link rel="icon" href="../img/icon/2232688.png" type="img/png">
   <link rel="stylesheet" href="../css/login.css" type="text/css">
+  <script src="../js/login.js" type="module" defer></script>
 </head>
 
 <body>
@@ -22,30 +23,5 @@
       </form>
     </div>
   </main>
-  
-  <script>
-    document.getElementById('loginForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-
-      try {
-        const response = await fetch('http://localhost:3000/login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, password }),
-        });
-
-        if (response.ok) {
-          alert('Bem vindo!');
-          window.location.href = 'books.html';
-        } else {
-          throw new Error();
-        }
-      } catch {
-        alert('Usuário ou Senha incorretos, tente novamente');
-      }
-    });
-  </script>
 </body>
 </html>
